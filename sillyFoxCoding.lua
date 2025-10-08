@@ -1,1 +1,3 @@
-print("nya :3")
+for i = 1, 5 do
+    print("Current value:", i)
+end
