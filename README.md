@@ -1,2 +1,2 @@
-# balatro-foxing
-None yet
+# Kitsune
+A Balatro mod.
