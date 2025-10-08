@@ -4,7 +4,7 @@
 	"display_name": "K",
 	"author": ["Kristal", "Sico"],
 	"description": "Fox",
-	"prefix": "kitsunefox",
+	"prefix": "fox",
 	"main_file": "sillyFoxCoding.lua",
 	"priority": 0,
 	"badge_colour": "#F47FFF",
