@@ -1,2 +1,2 @@
-# balatro-foxing
+# Kitsune
 None yet
