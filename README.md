@@ -1,2 +1,2 @@
 # Kitsune
-None yet
+A Balatro mod.
