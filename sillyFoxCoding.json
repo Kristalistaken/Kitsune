@@ -1,14 +1,14 @@
 {
-	"id": "",
-	"name": "",
-	"display_name": "",
-	"author": [""],
-	"description": "",
-	"prefix": "",
-	"main_file": "",
+	"id": "kitsune",
+	"name": "Kitsune",
+	"display_name": "K",
+	"author": ["Kristal", "Sico"],
+	"description": "Fox",
+	"prefix": "kitsunefox",
+	"main_file": "sillyFoxCoding.lua",
 	"priority": 0,
-	"badge_colour": "",
-	"badge_text_colour": "",
-	"version": "",
-	"dependencies": []
+	"badge_colour": "#F47FFF",
+	"badge_text_colour": "#FFFFFF",
+	"version": "0.1.0",
+	"dependencies": ["Steamodded (>=1.*)"]
 }
