@@ -1,4 +1,4 @@
---Hopefully makes it so stuff can be read
+--Hopefully makes it so stuff can be read (Does quite literally nothing atm I'm pretty sure)
 local current_mod = SMODS.current_mod
 local mod_path = SMODS.current_mod.path
 local config = SMODS.current_mod.config
@@ -12,7 +12,7 @@ local joker_list = {
 
 
 }
-assert(SMODS.load_file("indiv-jokers/Kitsune.lua"))()
+assert(SMODS.load_file("idv-jokers/Kitsune.lua"))()
 SMODS.Atlas({
     key = "fox_jokers",
     atlas = "fox_atlas",
