@@ -1,5 +1,6 @@
 SMODS.Joker {
 	key = 'kitsune',
+	atlas = 'fox_jokers',
 	rarity = 3,
 	pos = { x = 0, y = 0 },
 	cost = 8,
