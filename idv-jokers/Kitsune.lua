@@ -14,21 +14,21 @@ SMODS.Joker {
 			card.ability.extra.played_cards, card.ability.extra.played_cards_remaining,
 			numerator, denominator } }
 	end,
+
+-- SMODS.pseudorandom_probability(card, 'fox_kitsune', 1, card.ability.extra.odds) 
+-- [goes in the if card.ability.extra.etc thing]
+
 	calculate = function(self, card, context)
-		if context.individual and context.cardarea == G.play and
-		context.other_card:get_id() == 9 and not context.blueprint and
-		SMODS.pseudorandom_probability(card, 'fox_kitsune', 1, card.ability.extra.odds) then
-			if card.ability.extra.played_cards_remaining <= 1 then
+		if context.individual and context.cardarea == G.play and (context.other_card:get_id() == 9) then
+			card.ability.extra.played_cards = card.ability.extra.played_cards_remaining - 1
+			if card.ability.extra.played_cards_remaining < 1 and not context.blueprint then
 				card.ability.extra.played_cards_remaining = card.ability.extra.played_cards
-                card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain			
+				card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
 				return {
 					message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.xmult } },
 					colour = G.C.RED
 				}
-			else
-				card.ability.extra.played_cards = card.ability.extra.played_cards_remaining - 1
-				return nil, true -- This is for Joker retrigger purposes
-            end
+			end
 		end
         if context.joker_main then
             return {
