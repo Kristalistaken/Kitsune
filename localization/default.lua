@@ -1,5 +1,5 @@
 return {
-    descriptions = {
+    descriptions = {      
         Joker = {
             j_fox_kitsune = {
                 name = "Kitsune",
