@@ -12,3 +12,9 @@ local joker_list = {
 
 
 }
+assert(SMODS.load_file("indiv-jokers/Kitsune.lua"))()
+SMODS.atlas({
+    key = "Fox_Jokers",
+    atlas_table = "ASSET_ATLAS",
+    path = "1"
+})
