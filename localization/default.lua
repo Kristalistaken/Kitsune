@@ -4,15 +4,12 @@ return {
             j_fox_kitsune = {
                 name = "Kitsune",
                 text = {
-                    "Place holder",
-                },
-            }
-
-
-
-
-
+                    "This Joker gains",
+                    "{X:mult,C:white} X#1# {} Mult every {C:attention}#2#{C:inactive} [#3#]{}",
+                    "9s played",
+                    "{C:inactive}(Currently {X:mult,C:white} X#4# {C:inactive} Mult)"
         }
-
-    }
+            },
+        },
+    },
 }
