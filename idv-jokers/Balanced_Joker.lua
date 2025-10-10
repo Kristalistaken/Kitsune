@@ -1,5 +1,5 @@
 SMODS.Joker {
-	key = 'balanced_joker',
+	key = 'balancedjoker',
 	atlas = 'fox_jokers',
 	rarity = 1,
 	pos = { x = 0, y = 0 },
@@ -22,7 +22,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if true then
-                if SMODS.pseudorandom_probability(card, 'group_0_e2e11086', 1, card.ability.extra.odds, 'j_fox_balanced_joker', false) then
+                if SMODS.pseudorandom_probability(card, 'group_0_e2e11086', 1, card.ability.extra.odds, 'j_fox_balanced_joker') then
               SMODS.calculate_effect({mult = card.ability.extra.mult}, card)
           end
             end
