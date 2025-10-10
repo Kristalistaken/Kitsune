@@ -9,6 +9,15 @@ return {
                     '{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult){}'
         }
             },
+
+            j_fox_balancedjoker = {
+                name = "Balanced Joker",
+                text = {
+                    '{C:green}#1# in #2#{} chance for {C:red}+3600{} Mult'
+        }
+            },
+
+            
         },
     },
 }
