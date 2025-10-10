@@ -3,13 +3,13 @@
 -- (will always have an edition)
 
 SMODS.Joker {
-	key = 'blank_card',
+	key = 'blank_canvas',
 	atlas = 'fox_jokers',
 	rarity = 2,
 	pos = { x = 0, y = 0 },
 	cost = 4,
 	blueprint_compat = false,
-	perishable_compat = false,
+	perishable_compat = true,
 	config = { extra = { xmultvar = 1, ninesplayed = 0, odds = 2 } },
 --	set_ability = function(self, card, initial)
 --        card:set_edition("e_polychrome", true)
@@ -20,7 +20,7 @@ SMODS.Joker {
       --  return {vars = {card.ability.extra.xmultvar, card.ability.extra.ninesplayed, new_numerator, new_denominator}}
     
     end,
-    
+
 
 
 }
