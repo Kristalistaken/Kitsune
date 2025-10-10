@@ -1,6 +1,6 @@
 SMODS.Joker {
-	key = 'balancedjoker',
-	atlas = 'fox_jokers',
+	key = 'balanced_joker',
+	atlas = 'fox_placeholder',
 	rarity = 1,
 	pos = { x = 0, y = 0 },
 	cost = 0,

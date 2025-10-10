@@ -3,8 +3,8 @@
 -- (will always have an edition)
 
 SMODS.Joker {
-	key = 'blankcanvas',
-	atlas = 'fox_jokers',
+	key = 'blank_canvas',
+	atlas = 'fox_placeholder',
 	rarity = 2,
 	pos = { x = 0, y = 0 },
 	cost = 4,
