@@ -4,7 +4,7 @@
 
 SMODS.Joker {
 	key = 'blank_canvas',
-	atlas = 'fox_jokers',
+	atlas = 'fox_placeholder',
 	rarity = 2,
 	pos = { x = 0, y = 0 },
 	cost = 4,
