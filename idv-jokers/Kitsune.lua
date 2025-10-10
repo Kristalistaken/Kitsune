@@ -21,7 +21,7 @@ SMODS.Joker {
                     Xmult = card.ability.extra.xmultvar
                 }
         end
-        if context.individual and context.cardarea == G.play and not(context.blueprint_compat) then
+        if context.individual and context.cardarea == G.play and not context.blueprint  then
             if (context.other_card:get_id() == 9 and (card.ability.extra.ninesplayed or 0) >= 8) then
                 card.ability.extra.ninesplayed = 0
                 if SMODS.pseudorandom_probability(card, 'group_0_6ecd10a1', 1, card.ability.extra.odds, 'j_fox_kitsune', false) then
