@@ -3,7 +3,7 @@ SMODS.Joker {
 	atlas = 'fox_placeholder',
 	rarity = 2,
 	pos = { x = 0, y = 0 },
-	cost = 6,
+	cost = 5,
 	blueprint_compat = true,
 	perishable_compat = true,
 	config = { extra = { chips = 0, mult = 0, xmult = 1, jokerslots = 0 } },
