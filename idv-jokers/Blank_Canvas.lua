@@ -14,14 +14,15 @@ SMODS.Joker {
 		end
 	end,
 	loc_vars = function(self, info_queue, card)
-		if card.edition and card.edition.base then
-		elseif card.edition and card.edition.e_foil then
+		local has_edition = card.edition
+		if has_edition == nil then
+		elseif card.edition and card.edition.key == "e_foil" then
 			card.ability.extra.chips = 50
-		elseif card.edition and card.edition.e_holo then
+		elseif card.edition and card.edition.key == "e_holo" then
 			card.ability.extra.mult = 10
-		elseif card.edition and card.edition.e_polychrome then
+		elseif card.edition and card.edition.key == "e_polychrome" then
 			card.ability.extra.xmult = 1.5
-		elseif card.edition and card.edition.e_negative then
+		elseif card.edition and card.edition.key == "e_negative" then
 			G.jokers.config.card_limit = G.jokers.config.card_limit + 1
 			card.ability.extra.jokerslots = 1
 			G.was_negative = false
@@ -31,7 +32,7 @@ SMODS.Joker {
 			card.ability.extra.mult,
 			card.ability.extra.xmult,
 			card.ability.extra.jokerslots
-		} }
+		} } --[[ this is mandatory ]]
 	end,
 	calculate = function(self, card, context)
 		if context.selling_card == true and G.was_negative == true and not context.blueprint then
