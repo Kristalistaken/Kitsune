@@ -11,11 +11,18 @@ SMODS.Joker {
 		if not from_debuff then
 			local edition = poll_edition('fox_blankcanvas', nil, false, true, {'e_foil', 4, 'e_holo', 3, 'e_polychrome', 2, 'e_negative', 1})
         	card:set_edition(edition, true)
+			if edition == 'e_negative' then
+				G.jokers.config.card_limit = G.jokers.config.card_limit + 1
+			end
+		end
+	end,
+	remove_from_deck = function(self, card, from_debuff)
+		if not from_debuff and card.edition and card.edition.key == "e_negative" then
+			G.jokers.config.card_limit = G.jokers.config.card_limit - 1
 		end
 	end,
 	loc_vars = function(self, info_queue, card)
-		local has_edition = card.edition
-		if has_edition == nil then
+		if card.edition == nil then
 		elseif card.edition and card.edition.key == "e_foil" then
 			card.ability.extra.chips = 50
 		elseif card.edition and card.edition.key == "e_holo" then
@@ -23,8 +30,10 @@ SMODS.Joker {
 		elseif card.edition and card.edition.key == "e_polychrome" then
 			card.ability.extra.xmult = 1.5
 		elseif card.edition and card.edition.key == "e_negative" then
-			G.jokers.config.card_limit = G.jokers.config.card_limit + 1
 			card.ability.extra.jokerslots = 1
+			G.was_negative = true
+		end
+		if card.edition and not card.edition.key == "e_negative" then
 			G.was_negative = false
 		end
 		return { vars = {
@@ -32,12 +41,9 @@ SMODS.Joker {
 			card.ability.extra.mult,
 			card.ability.extra.xmult,
 			card.ability.extra.jokerslots
-		} } --[[ this is mandatory ]]
+		} }
 	end,
 	calculate = function(self, card, context)
-		if context.selling_card == true and G.was_negative == true and not context.blueprint then
-			G.jokers.config.card_limit = G.jokers.config.card_limit - 1
-		end
 		if context.cardarea == G.jokers and context.joker_main then
 			return {
 				chips = card.ability.extra.chips,
