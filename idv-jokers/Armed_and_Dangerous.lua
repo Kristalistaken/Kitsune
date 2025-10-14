@@ -6,7 +6,7 @@ SMODS.Joker {
 	cost = 4,
 	blueprint_compat = true,
 	perishable_compat = true,
-	config = { extra = { xmultgain = 1, retriggers = 0 } },
+	config = { extra = { xmultgain = 0.5, retriggers = 0 } },
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.xmultgain}}
     end,
@@ -15,7 +15,7 @@ SMODS.Joker {
             card.ability.extra.retriggers = card.ability.extra.retriggers + 1
             return { card = card }
         end
-        if context.joker_main and card.ability.extra.retriggers > 0 then
+        if context.post_trigger and context.other_context.retrigger_joker then
             return { xmult = card.ability.extra.retriggers * card.ability.extra.xmultgain + 1 }
         end
         if (context.before or context.after) and not context.blueprint then
