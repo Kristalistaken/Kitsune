@@ -1,29 +1,36 @@
 SMODS.Joker {
 	key = 'armed',
 	atlas = 'fox_placeholder',
-	rarity = 2,
+	rarity = 3,
 	pos = { x = 0, y = 0 },
 	cost = 4,
 	blueprint_compat = true,
 	perishable_compat = true,
-	config = { extra = { xmultvar = 1, retriggeredcard = nil } },
+	config = { extra = { xmultgain = 1, retriggers = 0 } },
     loc_vars = function(self, info_queue, card)
-        return {vars = {card.ability.extra.xmultvar}}
+        return {vars = {card.ability.extra.xmultgain}}
     end,
-
     calculate = function(self, card, context)
-        if context.cardarea == G.play and context.individual then
-            if card.ability.extra.retriggeredcard and context.other_card == card.ability.extra.retriggeredcard then
-                card.ability.extra.xmultvar = (card.ability.extra.xmultvar) + 0.5
-            else
-                card.ability.extra.retriggeredcard = context.other_card
-            end
-            return { Xmult = card.ability.extra.xmultvar }
+        if context.post_trigger and context.other_context.retrigger_joker and not context.blueprint then
+            card.ability.extra.retriggers = card.ability.extra.retriggers + 1
+            return { card = card }
         end
-        if context.after and context.cardarea == G.jokers and not context.blueprint then
-            return { func = function()
-                card.ability.extra.xmultvar = 1 return true end
-            }
+        if context.joker_main and card.ability.extra.retriggers > 0 then
+            return { xmult = card.ability.extra.retriggers * card.ability.extra.xmultgain + 1 }
+        end
+        if (context.before or context.after) and not context.blueprint then
+            card.ability.extra.retriggers = 0
         end
     end
 }
+local rep_calc = SMODS.calculate_repetitions
+function SMODS.calculate_repetitions(card, context, reps)
+    local rep_return = rep_calc(card, context, reps)
+    local jokers = SMODS.find_card('j_fox_armed')
+    if next(jokers) then
+        for _, joker in ipairs(jokers) do
+            joker.ability.extra.retriggers = joker.ability.extra.retriggers + #rep_return - 1
+        end
+    end
+    return rep_return
+end
