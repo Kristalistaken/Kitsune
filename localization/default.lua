@@ -29,10 +29,10 @@ return {
             j_fox_armed = {
                 name = "Armed and Dangerous",
                 text = {
-                    'Each played card gives {X:red,C:white}X1{} mult',
-                    'when scored, this is increased',
-                    'by {X:red,C:white}X0.5{} mult for each scored card,',
-                    'resets after the hand is scored'
+                    'Each retrigger on a card gives {X:red,C:white}X1.1{}',
+                    'mult when scored, this is increased by',
+                    '{X:red,C:white}X0.1{} mult for each retriggered',
+                    'card, resets after the hand is scored'
         }
             },
             j_fox_loan = {
@@ -45,10 +45,10 @@ return {
             j_fox_singing = {
                 name = "Singing Machine",
                 text = {
-                    'Has a {C:green}#1# in #2#{} chance to',
+                    'When {C:attention}Boss Blind{} is selected, this',
+                    'Joker has a {C:green}#1# in #2#{} chance to',
                     '{C:attention}destroy{} all other {C:attention}Jokers{} and to',
                     'permanently copy their abilities',
-                    'after beating a {C:attention}Boss Blind{}'
         }
             }
         },
