@@ -1,6 +1,5 @@
-SMODS.Joker {
+local joker = {
 	key = 'kitsune',
-	atlas = 'fox_placeholder',
 	rarity = 3,
 	pos = { x = 0, y = 0 },
 	cost = 8,
@@ -27,3 +26,5 @@ SMODS.Joker {
         end
     end
 }
+
+return joker

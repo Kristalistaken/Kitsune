@@ -4,9 +4,9 @@ function Card:set_cost()
     if self.config.center.key == "j_fox_loan" then self.cost = 0 end
     return g
 end
-SMODS.Joker {
+
+local joker = {
 	key = 'loan',
-	atlas = 'fox_placeholder',
 	rarity = 1,
   cost = 0,
 	pos = { x = 0, y = 0 },
@@ -35,3 +35,5 @@ SMODS.Joker {
     end
   end ]]
 }
+
+return joker

@@ -1,6 +1,5 @@
-SMODS.Joker {
+local joker = {
 	key = 'blankcanvas',
-	atlas = 'fox_placeholder',
 	rarity = 2,
 	pos = { x = 0, y = 0 },
 	cost = 5,
@@ -54,3 +53,5 @@ SMODS.Joker {
 		end
 	end
 }
+
+return joker
