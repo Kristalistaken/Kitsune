@@ -3,9 +3,10 @@ local joker_list = {
     "Kitsune",
     "Balanced_Joker",
     "Blank_Canvas",
---    "Singing_Machine",
+--    "Singing_Machine",    -- W.I.P.
     "Armed_and_Dangerous",  -- Doesn't work with Talisman if cloning joker
-    "Loan_Shark"
+    "Loan_Shark",
+--    "ninetails"           -- W.I.P.
 
 }
 

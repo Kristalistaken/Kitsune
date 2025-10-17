@@ -29,10 +29,10 @@ return {
             j_fox_armed = {
                 name = "Armed and Dangerous",
                 text = {
-                    'Each retrigger on a card gives {X:red,C:white}X1.1{}',
+                    'Each retrigger on a scored card gives {X:red,C:white}X1{}',
                     'mult when scored, this is increased by',
                     '{X:red,C:white}X0.1{} mult for each retriggered',
-                    'card, resets after the hand is scored'
+                    'scored card, resets after the hand is scored'
         }
             },
             j_fox_loan = {
