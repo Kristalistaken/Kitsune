@@ -12,13 +12,13 @@ local joker = {
     end,
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main then
-                return { Xmult = card.ability.extra.xmultvar }
+            return { Xmult = card.ability.extra.xmultvar }
         end
-        if context.individual and context.cardarea == G.play and not context.blueprint  then
+        if context.individual and context.cardarea == G.play and not context.blueprint then
             if (context.other_card:get_id() == 9 and (card.ability.extra.ninesplayed or 0) >= 8) then
                 card.ability.extra.ninesplayed = 0
 --                if SMODS.pseudorandom_probability(card, 'group_0_6ecd10a1', 1, card.ability.extra.odds, 'j_fox_kitsune') then
-                    card.ability.extra.xmultvar = (card.ability.extra.xmultvar) + 0.5
+                card.ability.extra.xmultvar = (card.ability.extra.xmultvar) + 0.5
 --                end
             elseif context.other_card:get_id() == 9 then
                 card.ability.extra.ninesplayed = (card.ability.extra.ninesplayed) + 1
