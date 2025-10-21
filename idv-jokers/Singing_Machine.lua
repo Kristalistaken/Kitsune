@@ -17,8 +17,8 @@ local joker = {
                 if SMODS.pseudorandom_probability(card, 'group_0_e2e11086', 1, card.ability.extra.odds, 'j_fox_singing') then
                     if j.config.center.key ~= self.key then
                         table.insert(card.ability.extra.currentJoker, j.config.center.key)
-                    end
                     SMODS.destroy_cards(j)
+                    end
                 end
             end
         end
