@@ -44,8 +44,9 @@ local joker = {
                     card.config.center = old_center
                     card.config.center_key = old_center_key
                     for i, v in ipairs({'juice_up', 'start_dissolve', 'remove', 'flip'}) do
-                         G.modprefix_savedjokercards[card.sort_id][key][v] = function(_, ...)
-                       return card[v](card, ...)
+                        G.fox_savedjokercards[card.sort_id][key][v] = function(_, ...)
+                            return card[v](card, ...)
+                        end
                     end
                 end
                 local effect = G.fox_savedjokercards[card.sort_id][key]:calculate_joker(context)
