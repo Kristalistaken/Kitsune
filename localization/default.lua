@@ -92,6 +92,14 @@ return {
                     "singular present of be and myself, simply better",
                     "than you."
         }
+            },
+            j_fox_morph = {
+                name = "Metamorphosis",
+                text = {
+                    'All {C:attention}numbered{} cards are',
+                    'additionally counted as {C:attention}9{}s',
+                    '{C:inactive}(Appears only if you have {C:attention}Kitsune{}{C:inactive}){}'
+        }
             }
         },
     },

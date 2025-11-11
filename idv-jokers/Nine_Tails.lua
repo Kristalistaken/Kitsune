@@ -3,8 +3,8 @@ local joker = {
     config = {
         extra = { repetitions = 2 }
     },
-    cost = 6,
-    rarity = 4,
+    cost = 8,
+    rarity = 3,
     blueprint_compat = true,
     perishable_compat = true,
     in_pool = function()

@@ -7,7 +7,8 @@ local joker_list = {
     "Armed_and_Dangerous",  -- Doesn't work with Talisman if cloning joker
     "Loan_Shark",
     "Nine_Tails",
-    "I_Have_No_Mouth"
+    "I_Have_No_Mouth",
+  --  "Metamorphosis"
 
 }
 

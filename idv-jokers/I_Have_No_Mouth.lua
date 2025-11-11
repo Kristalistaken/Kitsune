@@ -3,6 +3,7 @@ local joker = {
 	rarity = 4,
 	pos = { x = 0, y = 0 },
 	cost = 20,
+    no_collection = true,
 	blueprint_compat = false,
 	perishable_compat = false,
 	config = { extra = { tally1 = 0, tally2 = 0, tally3 = 0, odds = 5, tally4 = 0, xmult = 1, counter = 0 } },
