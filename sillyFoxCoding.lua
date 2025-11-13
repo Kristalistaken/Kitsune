@@ -8,7 +8,7 @@ local joker_list = {
     "Loan_Shark",
     "Nine_Tails",
     "I_Have_No_Mouth",
-  --  "Metamorphosis"
+    -- "Metamorphosis"
 
 }
 
